@@ -92,7 +92,9 @@ builder.Services.AddCors(options =>
                 "https://localhost:4200",
                 "https://islamic-jobs.vercel.app",
                 "https://*.vercel.app",
-                "https://*.railway.app"
+                "https://*.railway.app",
+                "https://islamic-jobs-web.onrender.com",
+                "https://*.onrender.com"
             )
             .SetIsOriginAllowedToAllowWildcardSubdomains()
             .AllowAnyHeader()
