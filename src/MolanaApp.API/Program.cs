@@ -9,14 +9,39 @@ using Npgsql;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add DbContext - Support both SQL Server and PostgreSQL
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") 
+    ?? Environment.GetEnvironmentVariable("DATABASE_URL");
 var databaseProvider = builder.Configuration["DatabaseProvider"] ?? "SqlServer";
+
+// Convert Render's postgres:// URL to Npgsql format if needed
+string? ConvertPostgresUrl(string? url)
+{
+    if (string.IsNullOrEmpty(url)) return url;
+    
+    // If it's already in standard format, return as-is
+    if (url.Contains("Host=") || url.Contains("Server=")) return url;
+    
+    // Convert postgres://user:pass@host:port/db to Npgsql format
+    if (url.StartsWith("postgres://") || url.StartsWith("postgresql://"))
+    {
+        var uri = new Uri(url);
+        var userInfo = uri.UserInfo.Split(':');
+        var host = uri.Host;
+        var port = uri.Port > 0 ? uri.Port : 5432;
+        var database = uri.AbsolutePath.TrimStart('/');
+        
+        return $"Host={host};Port={port};Database={database};Username={userInfo[0]};Password={userInfo[1]};SSL Mode=Require;Trust Server Certificate=true";
+    }
+    
+    return url;
+}
 
 builder.Services.AddDbContext<MolanaAppDbContext>(options =>
 {
     if (databaseProvider == "PostgreSQL" || connectionString?.Contains("postgresql") == true || connectionString?.Contains("postgres") == true)
     {
-        options.UseNpgsql(connectionString);
+        var npgsqlConnectionString = ConvertPostgresUrl(connectionString);
+        options.UseNpgsql(npgsqlConnectionString);
     }
     else
     {

@@ -142,7 +142,7 @@ interface PagedResult<T> {
                     <span class="status-rejected">✗ Rejected</span>
                   }
                   @if (app.candidate?.phoneNumber) {
-                    <a [href]="getWhatsAppLink(app.candidate.phoneNumber, app.candidate.firstName, app.job?.title)" target="_blank" class="btn-message">
+                    <a [href]="getWhatsAppLink(app.candidate!.phoneNumber!, app.candidate!.firstName, app.job?.title)" target="_blank" class="btn-message">
                       📱 WhatsApp
                     </a>
                   }
