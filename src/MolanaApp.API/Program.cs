@@ -87,19 +87,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngular", policy =>
     {
-        policy.WithOrigins(
-                "http://localhost:4200",
-                "https://localhost:4200",
-                "https://islamic-jobs.vercel.app",
-                "https://*.vercel.app",
-                "https://*.railway.app",
-                "https://islamic-jobs-web.onrender.com",
-                "https://*.onrender.com"
-            )
-            .SetIsOriginAllowedToAllowWildcardSubdomains()
+        policy.AllowAnyOrigin()
             .AllowAnyHeader()
-            .AllowAnyMethod()
-            .AllowCredentials();
+            .AllowAnyMethod();
     });
 });
 
