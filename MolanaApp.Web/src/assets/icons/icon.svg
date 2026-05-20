@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="100" fill="#1a5f7a"/>
+  
+  <!-- Mosque Base -->
+  <rect x="96" y="320" width="320" height="120" fill="#ffffff"/>
+  
+  <!-- Central Dome -->
+  <ellipse cx="256" cy="200" rx="100" ry="80" fill="#ffffff"/>
+  <rect x="156" y="200" width="200" height="120" fill="#ffffff"/>
+  
+  <!-- Central Minaret/Spire -->
+  <rect x="246" y="100" width="20" height="40" fill="#ffffff"/>
+  <polygon points="256,60 240,100 272,100" fill="#ffffff"/>
+  
+  <!-- Crescent Moon on top -->
+  <circle cx="256" cy="55" r="18" fill="#ffd700"/>
+  <circle cx="262" cy="52" r="14" fill="#1a5f7a"/>
+  
+  <!-- Left Minaret -->
+  <rect x="110" y="180" width="30" height="140" fill="#ffffff"/>
+  <polygon points="125,140 100,180 150,180" fill="#ffffff"/>
+  <circle cx="125" cy="135" r="10" fill="#ffd700"/>
+  <circle cx="129" cy="133" r="7" fill="#1a5f7a"/>
+  
+  <!-- Right Minaret -->
+  <rect x="372" y="180" width="30" height="140" fill="#ffffff"/>
+  <polygon points="387,140 362,180 412,180" fill="#ffffff"/>
+  <circle cx="387" cy="135" r="10" fill="#ffd700"/>
+  <circle cx="391" cy="133" r="7" fill="#1a5f7a"/>
+  
+  <!-- Door -->
+  <rect x="226" y="360" width="60" height="80" rx="30" ry="30" fill="#1a5f7a"/>
+  
+  <!-- Windows -->
+  <ellipse cx="176" cy="360" rx="20" ry="25" fill="#1a5f7a"/>
+  <ellipse cx="336" cy="360" rx="20" ry="25" fill="#1a5f7a"/>
+  
+  <!-- Dome decoration -->
+  <ellipse cx="256" cy="200" rx="70" ry="55" fill="none" stroke="#1a5f7a" stroke-width="3"/>
+</svg>
