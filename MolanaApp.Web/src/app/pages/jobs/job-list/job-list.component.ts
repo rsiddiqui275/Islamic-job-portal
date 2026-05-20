@@ -87,16 +87,16 @@ import { Job, JobSearchParams, PagedResult, IslamicDesignation, JobType, Designa
               <a [routerLink]="['/jobs', job.id]" class="job-card">
                 <div class="job-header">
                   <div class="employer-info">
-                    @if (job.employer.logoUrl) {
-                      <img [src]="job.employer.logoUrl" [alt]="job.employer.organizationName" class="logo" />
+                    @if (job.employer?.logoUrl) {
+                      <img [src]="job.employer!.logoUrl" [alt]="job.employer!.organizationName" class="logo" />
                     } @else {
                       <div class="logo-placeholder">🕌</div>
                     }
                     <div>
                       <h3 class="job-title">{{ job.title }}</h3>
                       <p class="employer-name">
-                        {{ job.employer.organizationName }}
-                        @if (job.employer.isVerified) {
+                        {{ job.employer?.organizationName }}
+                        @if (job.employer?.isVerified) {
                           <span class="verified">✓</span>
                         }
                       </p>

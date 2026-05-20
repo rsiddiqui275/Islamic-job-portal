@@ -22,16 +22,16 @@ import { BackButtonComponent } from '../../../components/back-button/back-button
           <!-- Header -->
           <header class="job-header">
             <div class="employer-info">
-              @if (job()!.employer.logoUrl) {
-                <img [src]="job()!.employer.logoUrl" [alt]="job()!.employer.organizationName" class="logo" />
+              @if (job()!.employer?.logoUrl) {
+                <img [src]="job()!.employer!.logoUrl" [alt]="job()!.employer!.organizationName" class="logo" />
               } @else {
                 <div class="logo-placeholder">🕌</div>
               }
               <div>
                 <h1>{{ job()!.title }}</h1>
                 <p class="employer-name">
-                  {{ job()!.employer.organizationName }}
-                  @if (job()!.employer.isVerified) {
+                  {{ job()!.employer?.organizationName }}
+                  @if (job()!.employer?.isVerified) {
                     <span class="verified">✓ Verified</span>
                   }
                 </p>
@@ -110,18 +110,18 @@ import { BackButtonComponent } from '../../../components/back-button/back-button
             <div class="contact-info">
               <div class="contact-item">
                 <span class="icon">🏢</span>
-                <span>{{ job()!.employer.organizationName }}</span>
+                <span>{{ job()!.employer?.organizationName }}</span>
               </div>
-              @if (job()!.employer.contactPhone) {
+              @if (job()!.employer?.contactPhone) {
                 <div class="contact-item">
                   <span class="icon">📞</span>
-                  <a [href]="'tel:' + job()!.employer.contactPhone">{{ job()!.employer.contactPhone }}</a>
+                  <a [href]="'tel:' + job()!.employer!.contactPhone">{{ job()!.employer!.contactPhone }}</a>
                 </div>
               }
-              @if (job()!.employer.contactEmail) {
+              @if (job()!.employer?.contactEmail) {
                 <div class="contact-item">
                   <span class="icon">📧</span>
-                  <a [href]="'mailto:' + job()!.employer.contactEmail">{{ job()!.employer.contactEmail }}</a>
+                  <a [href]="'mailto:' + job()!.employer!.contactEmail">{{ job()!.employer!.contactEmail }}</a>
                 </div>
               }
               <div class="contact-item">

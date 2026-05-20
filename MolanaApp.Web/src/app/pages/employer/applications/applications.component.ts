@@ -99,8 +99,8 @@ interface PagedResult<T> {
               @if (app.job) {
                 <div class="job-applied">
                   <label>Applied for:</label>
-                  <a [routerLink]="['/jobs', app.jobId]" class="job-link">{{ app.job.title }}</a>
-                  <span class="org-name">at {{ app.job.organizationName }}</span>
+                  <a [routerLink]="['/jobs', app.jobId]" class="job-link">{{ app.job!.title }}</a>
+                  <span class="org-name">at {{ app.job!.organizationName }}</span>
                 </div>
               }
 
