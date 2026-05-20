@@ -27,7 +27,7 @@ services:
   - type: web
     name: islamic-jobs-web
     runtime: static
-    buildCommand: cd MolanaApp.Web && npm ci && npm run build
+    buildCommand: cd MolanaApp.Web && npm ci && npm run build -- --configuration=production
     staticPublishPath: MolanaApp.Web/dist/MolanaApp.Web/browser
     region: ohio
     plan: free
