@@ -75,19 +75,19 @@ interface PagedResult<T> {
               @if (app.candidate) {
                 <div class="candidate-header">
                   <div class="avatar">
-                    @if (app.candidate.profileImageUrl) {
-                      <img [src]="app.candidate.profileImageUrl" [alt]="app.candidate.firstName" />
+                    @if (app.candidate!.profileImageUrl) {
+                      <img [src]="app.candidate!.profileImageUrl" [alt]="app.candidate!.firstName" />
                     } @else {
-                      <span class="initials">{{ getInitials(app.candidate) }}</span>
+                      <span class="initials">{{ getInitials(app.candidate!) }}</span>
                     }
                   </div>
                   <div class="candidate-info">
-                    <h3>{{ app.candidate.firstName }} {{ app.candidate.lastName }}</h3>
-                    @if (app.candidate.primaryDesignationName) {
-                      <p class="designation">{{ app.candidate.primaryDesignationName }}</p>
+                    <h3>{{ app.candidate!.firstName }} {{ app.candidate!.lastName }}</h3>
+                    @if (app.candidate!.primaryDesignationName) {
+                      <p class="designation">{{ app.candidate!.primaryDesignationName }}</p>
                     }
-                    @if (app.candidate.city) {
-                      <p class="location">📍 {{ app.candidate.city }}</p>
+                    @if (app.candidate!.city) {
+                      <p class="location">📍 {{ app.candidate!.city }}</p>
                     }
                   </div>
                   <span [class]="'status status-' + getStatusClass(app.status)">
@@ -108,7 +108,7 @@ interface PagedResult<T> {
                 @if (app.candidate?.yearsOfExperience) {
                   <div class="detail">
                     <label>Experience:</label>
-                    <span>{{ app.candidate.yearsOfExperience }} years</span>
+                    <span>{{ app.candidate!.yearsOfExperience }} years</span>
                   </div>
                 }
                 @if (app.expectedSalary) {
