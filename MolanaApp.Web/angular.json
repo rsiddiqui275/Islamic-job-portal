@@ -64,6 +64,13 @@
                 "glob": "sw.js",
                 "input": "src",
                 "output": "/"
+              },
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              },
+                "output": "/"
               }
             ],
             "styles": [
