@@ -56,6 +56,11 @@ builder.Services.AddScoped<IApplicationService, ApplicationService>();
 builder.Services.AddScoped<IMessageService, MessageService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 
+// JWT Configuration with fallbacks
+var jwtKey = builder.Configuration["Jwt:Key"] ?? "MolanaApp-Super-Secret-Key-2024-Islamic-Portal-Default";
+var jwtIssuer = builder.Configuration["Jwt:Issuer"] ?? "MolanaApp";
+var jwtAudience = builder.Configuration["Jwt:Audience"] ?? "MolanaAppUsers";
+
 // Add Authentication
 builder.Services.AddAuthentication(options =>
 {
@@ -70,10 +75,10 @@ builder.Services.AddAuthentication(options =>
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
-        ValidIssuer = builder.Configuration["Jwt:Issuer"],
-        ValidAudience = builder.Configuration["Jwt:Audience"],
+        ValidIssuer = jwtIssuer,
+        ValidAudience = jwtAudience,
         IssuerSigningKey = new SymmetricSecurityKey(
-            Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!))
+            Encoding.UTF8.GetBytes(jwtKey))
     };
 });
 

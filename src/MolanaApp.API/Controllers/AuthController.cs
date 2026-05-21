@@ -11,10 +11,12 @@ namespace MolanaApp.API.Controllers;
 public class AuthController : ControllerBase
 {
     private readonly IAuthService _authService;
+    private readonly ILogger<AuthController> _logger;
 
-    public AuthController(IAuthService authService)
+    public AuthController(IAuthService authService, ILogger<AuthController> logger)
     {
         _authService = authService;
+        _logger = logger;
     }
 
     [HttpPost("register")]
@@ -22,12 +24,20 @@ public class AuthController : ControllerBase
     {
         try
         {
+            _logger.LogInformation("Registration attempt for email: {Email}", dto.Email);
             var result = await _authService.RegisterAsync(dto);
+            _logger.LogInformation("Registration successful for email: {Email}", dto.Email);
             return Ok(result);
         }
         catch (InvalidOperationException ex)
         {
+            _logger.LogWarning("Registration failed: {Message}", ex.Message);
             return BadRequest(new { message = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Registration error for email: {Email}", dto.Email);
+            return StatusCode(500, new { message = "Registration failed: " + ex.Message });
         }
     }
 
@@ -36,12 +46,20 @@ public class AuthController : ControllerBase
     {
         try
         {
+            _logger.LogInformation("Login attempt for email: {Email}", dto.Email);
             var result = await _authService.LoginAsync(dto);
+            _logger.LogInformation("Login successful for email: {Email}", dto.Email);
             return Ok(result);
         }
         catch (UnauthorizedAccessException ex)
         {
+            _logger.LogWarning("Login failed: {Message}", ex.Message);
             return Unauthorized(new { message = ex.Message });
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "Login error for email: {Email}", dto.Email);
+            return StatusCode(500, new { message = "Login failed: " + ex.Message });
         }
     }
 
