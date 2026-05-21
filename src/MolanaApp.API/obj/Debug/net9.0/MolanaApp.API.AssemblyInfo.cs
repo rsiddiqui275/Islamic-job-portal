@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MolanaApp.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4af6f0e6f76a3e06059cc3988285723aea987871")]
 [assembly: System.Reflection.AssemblyProductAttribute("MolanaApp.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MolanaApp.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

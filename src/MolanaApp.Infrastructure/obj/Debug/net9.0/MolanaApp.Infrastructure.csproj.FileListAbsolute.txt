@@ -15,3 +15,4 @@ C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.Infrastructure\obj\Debug\net9
 C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.Infrastructure\obj\Debug\net9.0\MolanaApp.Infrastructure.pdb
 C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.Infrastructure\obj\Debug\net9.0\MolanaApp.Infrastructure.genruntimeconfig.cache
 C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.Infrastructure\obj\Debug\net9.0\ref\MolanaApp.Infrastructure.dll
+C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.Infrastructure\obj\Debug\net9.0\MolanaApp.Infrastructure.sourcelink.json

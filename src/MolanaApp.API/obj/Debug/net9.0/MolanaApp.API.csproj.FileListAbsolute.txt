@@ -172,3 +172,7 @@ C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.API\bin\Debug\net9.0\ru\Micro
 C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.API\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.API\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.API\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.API\bin\Debug\net9.0\railway.json
+C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.API\bin\Debug\net9.0\Npgsql.dll
+C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.API\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.API\obj\Debug\net9.0\MolanaApp.API.sourcelink.json

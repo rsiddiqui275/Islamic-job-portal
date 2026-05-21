@@ -14,38 +14,46 @@ export interface Advertisement {
   providedIn: 'root'
 })
 export class AdService {
-  // Demo ads - in production, fetch from API
+  // ⚠️ DEMO ADS - Remove for production
   private ads = signal<Advertisement[]>([
     {
       id: '1',
-      title: 'Islamic Book Store',
-      imageUrl: 'https://placehold.co/728x90/1a5f7a/white?text=Islamic+Books+%7C+Shop+Now',
-      targetUrl: 'https://example.com/books',
+      title: 'Islamic Books & Quran',
+      imageUrl: 'https://placehold.co/728x90/1a5f7a/ffffff?text=📚+Islamic+Books+%26+Quran+Store+|+Shop+Now+🛒',
+      targetUrl: '#',
       placement: 'header',
       isActive: true
     },
     {
       id: '2',
-      title: 'Halal Jobs Training',
-      imageUrl: 'https://placehold.co/300x250/2d8e5f/white?text=Get+Certified%0AHalal+Training',
-      targetUrl: 'https://example.com/training',
+      title: 'Halal Career Training',
+      imageUrl: 'https://placehold.co/300x250/2d8e5f/ffffff?text=🎓+Halal+Career%0ATraining+Center%0A%0AGet+Certified+Today!',
+      targetUrl: '#',
       placement: 'sidebar',
       isActive: true
     },
     {
       id: '3',
-      title: 'Madrasa Hiring',
-      imageUrl: 'https://placehold.co/728x90/e8b923/1a5f7a?text=Top+Madrasas+Are+Hiring+%7C+Apply+Now',
-      targetUrl: 'https://example.com/madrasa',
+      title: 'Top Madrasas Hiring',
+      imageUrl: 'https://placehold.co/728x90/e8b923/1a5f7a?text=🕌+Top+Madrasas+Are+Hiring!+|+Apply+Now+➡️',
+      targetUrl: '#',
       placement: 'job-list',
       isActive: true
     },
     {
       id: '4',
       title: 'Islamic Finance Course',
-      imageUrl: 'https://placehold.co/320x50/1a5f7a/white?text=Learn+Islamic+Finance',
-      targetUrl: 'https://example.com/finance',
+      imageUrl: 'https://placehold.co/728x50/134b5f/ffffff?text=💰+Learn+Islamic+Finance+|+Free+Course+Available',
+      targetUrl: '#',
       placement: 'footer',
+      isActive: true
+    },
+    {
+      id: '5',
+      title: 'Umrah Packages',
+      imageUrl: 'https://placehold.co/728x90/8B4513/ffffff?text=🕋+Special+Umrah+Packages+|+Book+Now+✈️',
+      targetUrl: '#',
+      placement: 'job-list',
       isActive: true
     }
   ]);

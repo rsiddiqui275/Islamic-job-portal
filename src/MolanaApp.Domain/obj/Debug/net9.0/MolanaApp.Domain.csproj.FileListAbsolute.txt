@@ -9,3 +9,4 @@ C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.Domain\obj\Debug\net9.0\Molan
 C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.Domain\obj\Debug\net9.0\refint\MolanaApp.Domain.dll
 C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.Domain\obj\Debug\net9.0\MolanaApp.Domain.pdb
 C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.Domain\obj\Debug\net9.0\ref\MolanaApp.Domain.dll
+C:\Users\Rehan\__project__\molanaApp\src\MolanaApp.Domain\obj\Debug\net9.0\MolanaApp.Domain.sourcelink.json

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YwsDdumEFcQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Rehan\\__project__\\molanaApp\\HashGen\\HashGen.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Rehan\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512"
+  ],
+  "logs": []
+}
