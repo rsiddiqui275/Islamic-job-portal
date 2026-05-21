@@ -24,6 +24,10 @@ export class AuthService {
     const role = this.currentUserSignal()?.role as any;
     return role === 2 || role === 'Employer' || role === UserRole.Employer;
   });
+  readonly isAdmin = computed(() => {
+    const role = this.currentUserSignal()?.role as any;
+    return role === 3 || role === 'Admin' || role === UserRole.Admin;
+  });
 
   constructor(
     private http: HttpClient,

@@ -37,3 +37,15 @@ export const employerGuard: CanActivateFn = () => {
   router.navigate(['/']);
   return false;
 };
+
+export const adminGuard: CanActivateFn = () => {
+  const authService = inject(AuthService);
+  const router = inject(Router);
+
+  if (authService.isAuthenticated() && authService.isAdmin()) {
+    return true;
+  }
+
+  router.navigate(['/']);
+  return false;
+};

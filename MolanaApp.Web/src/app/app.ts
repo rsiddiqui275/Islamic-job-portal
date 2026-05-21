@@ -33,6 +33,9 @@ import { AuthService } from './services/auth.service';
             @if (auth.isCandidate()) {
               <a routerLink="/my-applications" routerLinkActive="active" (click)="closeMenu()">My Applications</a>
             }
+            @if (auth.isAdmin()) {
+              <a routerLink="/admin" routerLinkActive="active" class="admin-link" (click)="closeMenu()">🔐 Admin</a>
+            }
             <a routerLink="/profile" routerLinkActive="active" (click)="closeMenu()">Profile</a>
             <button (click)="logout()" class="btn-logout">Logout</button>
           } @else {
@@ -133,6 +136,15 @@ import { AuthService } from './services/auth.service';
 
     .btn-logout:hover {
       background: rgba(255,255,255,0.1);
+    }
+
+    .admin-link {
+      background: rgba(255,215,0,0.2) !important;
+      border: 1px solid #ffd700;
+    }
+
+    .admin-link:hover {
+      background: rgba(255,215,0,0.3) !important;
     }
 
     .mobile-menu-btn {
