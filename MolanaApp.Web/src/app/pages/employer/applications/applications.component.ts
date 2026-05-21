@@ -451,6 +451,101 @@ interface PagedResult<T> {
       color: #dc3545;
       font-weight: 600;
     }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .applications-container {
+        padding: 15px 10px;
+      }
+
+      .page-header h1 {
+        font-size: 1.3rem;
+      }
+
+      .application-card {
+        padding: 15px;
+        border-radius: 12px;
+      }
+
+      .candidate-header {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .avatar {
+        width: 50px;
+        height: 50px;
+      }
+
+      .initials {
+        font-size: 1.2rem;
+      }
+
+      .candidate-info h3 {
+        font-size: 1rem;
+      }
+
+      .status {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+      }
+
+      .job-applied {
+        padding: 10px 12px;
+      }
+
+      .job-link {
+        display: block;
+        margin-left: 0;
+        margin-top: 4px;
+      }
+
+      .org-name {
+        display: block;
+        margin-left: 0;
+      }
+
+      .candidate-details {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .application-footer {
+        flex-direction: column;
+        gap: 12px;
+        align-items: stretch;
+      }
+
+      .applied-date {
+        text-align: center;
+      }
+
+      .actions {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .actions button, .actions a {
+        flex: 1;
+        min-width: 80px;
+        padding: 12px 10px;
+        text-align: center;
+        font-size: 0.85rem;
+      }
+
+      .cover-letter {
+        padding: 12px;
+      }
+
+      .loading, .empty-state {
+        padding: 40px 20px;
+      }
+
+      .empty-state .icon {
+        font-size: 3rem;
+      }
+    }
   `]
 })
 export class EmployerApplicationsComponent implements OnInit {

@@ -201,6 +201,62 @@ import { BackButtonComponent } from '../../../components/back-button/back-button
       font-weight: 600;
       padding: 8px 16px;
     }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .my-applications-container {
+        padding: 15px 10px;
+      }
+
+      .page-header h1 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+      }
+
+      .application-card {
+        padding: 15px;
+      }
+
+      .app-header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .app-header h3 {
+        font-size: 1rem;
+      }
+
+      .status {
+        align-self: flex-start;
+        font-size: 0.8rem;
+        padding: 5px 12px;
+      }
+
+      .app-details {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .actions {
+        flex-wrap: wrap;
+      }
+
+      .actions a, .actions button, .actions span {
+        flex: 1;
+        min-width: 100px;
+        text-align: center;
+        padding: 10px 15px;
+        font-size: 0.85rem;
+      }
+
+      .loading, .empty-state {
+        padding: 40px 20px;
+      }
+
+      .empty-state .icon {
+        font-size: 3rem;
+      }
+    }
   `]
 })
 export class MyApplicationsComponent implements OnInit {

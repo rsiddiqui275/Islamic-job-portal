@@ -381,13 +381,90 @@ import { Job, JobSearchParams, PagedResult, IslamicDesignation, JobType, Designa
     }
 
     @media (max-width: 768px) {
+      .search-header {
+        padding: 20px 15px;
+      }
+
+      .search-box {
+        flex-direction: column;
+      }
+
+      .search-box input {
+        padding: 12px 15px;
+      }
+
+      .btn-search {
+        padding: 12px;
+      }
+
       .content-wrapper {
         flex-direction: column;
+        padding: 15px 10px;
       }
 
       .filters {
         width: 100%;
         position: static;
+        padding: 15px;
+      }
+
+      .job-card {
+        padding: 15px;
+        margin-bottom: 10px;
+      }
+
+      .job-header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .employer-info {
+        gap: 10px;
+      }
+
+      .logo, .logo-placeholder {
+        width: 40px;
+        height: 40px;
+      }
+
+      .job-title {
+        font-size: 1rem;
+      }
+
+      .designation-badge {
+        align-self: flex-start;
+        font-size: 0.75rem;
+        padding: 4px 10px;
+      }
+
+      .job-details {
+        gap: 10px;
+      }
+
+      .detail {
+        font-size: 0.8rem;
+      }
+
+      .job-footer {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .loading, .no-results {
+        padding: 40px 20px;
+      }
+
+      .no-results .icon {
+        font-size: 3rem;
+      }
+
+      .pagination {
+        gap: 10px;
+      }
+
+      .pagination button {
+        padding: 10px 15px;
+        font-size: 0.9rem;
       }
     }
   `]

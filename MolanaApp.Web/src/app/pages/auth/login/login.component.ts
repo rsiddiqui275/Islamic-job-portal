@@ -163,6 +163,39 @@ import { AuthService } from '../../../services/auth.service';
       font-weight: 600;
       text-decoration: none;
     }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .login-container {
+        padding: 15px;
+        align-items: flex-start;
+        padding-top: 30px;
+      }
+
+      .login-card {
+        padding: 25px 20px;
+        max-width: 100%;
+        border-radius: 16px;
+      }
+
+      .auth-header h1 {
+        font-size: 1.5rem;
+      }
+
+      .auth-header h2 {
+        font-size: 1rem;
+      }
+
+      .form-group input {
+        padding: 14px 12px;
+        font-size: 16px; /* Prevents zoom on iOS */
+      }
+
+      .btn-submit {
+        padding: 16px;
+        font-size: 1rem;
+      }
+    }
   `]
 })
 export class LoginComponent {
