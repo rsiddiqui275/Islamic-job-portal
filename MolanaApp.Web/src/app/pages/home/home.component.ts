@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { DesignationLabels, IslamicDesignation } from '../../models';
+import { AdBannerComponent } from '../../components/ad-banner/ad-banner.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, AdBannerComponent],
   template: `
     <div class="home-container">
       <!-- Hero Section -->
@@ -26,6 +27,9 @@ import { DesignationLabels, IslamicDesignation } from '../../models';
           </div>
         </div>
       </section>
+
+      <!-- Header Ad Banner -->
+      <app-ad-banner placement="header"></app-ad-banner>
 
       <!-- Designations Section -->
       <section class="designations">

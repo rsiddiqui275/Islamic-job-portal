@@ -4,13 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, ActivatedRoute } from '@angular/router';
 import { JobService } from '../../../services/job.service';
 import { Job, JobSearchParams, PagedResult, IslamicDesignation, JobType, DesignationLabels, JobTypeLabels } from '../../../models';
+import { AdBannerComponent } from '../../../components/ad-banner/ad-banner.component';
 
 @Component({
   selector: 'app-job-list',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, RouterModule, AdBannerComponent],
   template: `
     <div class="job-list-container">
+      <!-- Header Ad -->
+      <app-ad-banner placement="header"></app-ad-banner>
+
       <!-- Search Header -->
       <div class="search-header">
         <div class="search-box">
@@ -67,6 +71,9 @@ import { Job, JobSearchParams, PagedResult, IslamicDesignation, JobType, Designa
           </div>
 
           <button (click)="clearFilters()" class="btn-clear">Clear Filters</button>
+          
+          <!-- Sidebar Ad -->
+          <app-ad-banner placement="sidebar"></app-ad-banner>
         </aside>
 
         <!-- Job List -->
@@ -126,6 +133,11 @@ import { Job, JobSearchParams, PagedResult, IslamicDesignation, JobType, Designa
                   <span class="stats">👁️ {{ job.viewCount }} | 📨 {{ job.applicationCount }}</span>
                 </div>
               </a>
+
+              <!-- Inline ad after every 3rd job -->
+              @if (($index + 1) % 3 === 0) {
+                <app-ad-banner placement="job-list"></app-ad-banner>
+              }
             }
 
             <!-- Pagination -->

@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { AuthService } from './services/auth.service';
+import { AdBannerComponent } from './components/ad-banner/ad-banner.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, RouterModule],
+  imports: [CommonModule, RouterOutlet, RouterModule, AdBannerComponent],
   template: `
     <header class="main-header">
       <nav class="nav-container">
@@ -49,6 +50,9 @@ import { AuthService } from './services/auth.service';
     <main class="main-content">
       <router-outlet />
     </main>
+
+    <!-- Footer Ad -->
+    <app-ad-banner placement="footer"></app-ad-banner>
 
     <footer class="main-footer">
       <div class="footer-content">
