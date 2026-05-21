@@ -89,3 +89,97 @@ input:focus, select:focus, textarea:focus {
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+
+/* ============================================
+   MOBILE RESPONSIVE STYLES
+   ============================================ */
+
+/* Mobile-first base adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  /* Form inputs */
+  input, select, textarea {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 14px 12px !important;
+  }
+
+  /* Buttons */
+  button, .btn, [class*="btn-"] {
+    padding: 14px 20px !important;
+    font-size: 15px !important;
+    min-height: 48px;
+    width: 100%;
+  }
+
+  /* Cards */
+  .card, [class*="-card"] {
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+
+  /* Headings */
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.5rem !important; }
+  h3 { font-size: 1.25rem !important; }
+
+  /* Navigation */
+  nav, .navbar, header {
+    padding: 10px 15px !important;
+  }
+
+  /* Page containers */
+  [class*="-container"] {
+    padding: 15px !important;
+    max-width: 100% !important;
+  }
+
+  /* Flex grids to stack */
+  .flex-row, [class*="grid"] {
+    flex-direction: column !important;
+  }
+
+  /* Hide on mobile */
+  .hide-mobile {
+    display: none !important;
+  }
+
+  /* Full width on mobile */
+  .mobile-full-width {
+    width: 100% !important;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  h1 { font-size: 1.5rem !important; }
+  h2 { font-size: 1.25rem !important; }
+  h3 { font-size: 1.1rem !important; }
+
+  .container, [class*="-container"] {
+    padding: 10px !important;
+  }
+
+  /* Compact spacing */
+  .card, [class*="-card"] {
+    padding: 12px !important;
+  }
+}
+
+/* Touch-friendly targets */
+@media (hover: none) and (pointer: coarse) {
+  a, button, [role="button"], input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
