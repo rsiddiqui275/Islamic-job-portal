@@ -57,7 +57,7 @@ builder.Services.AddScoped<IMessageService, MessageService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
 
 // JWT Configuration with fallbacks
-var jwtKey = builder.Configuration["Jwt:Key"] ?? "MolanaApp-Super-Secret-Key-2024-Islamic-Portal-Default";
+var jwtKey = builder.Configuration["Jwt:Key"] ?? "MolanaApp-Super-Secret-Key-2024-Islamic-Portal-Secure-Key-256bit";
 var jwtIssuer = builder.Configuration["Jwt:Issuer"] ?? "MolanaApp";
 var jwtAudience = builder.Configuration["Jwt:Audience"] ?? "MolanaAppUsers";
 

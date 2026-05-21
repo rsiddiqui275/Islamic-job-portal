@@ -141,7 +141,7 @@ public class AuthService : IAuthService
 
     private string GenerateJwtToken(User user)
     {
-        var jwtKey = _configuration["Jwt:Key"] ?? "MolanaApp-Super-Secret-Key-2024-Islamic-Portal-Default";
+        var jwtKey = _configuration["Jwt:Key"] ?? "MolanaApp-Super-Secret-Key-2024-Islamic-Portal-Secure-Key-256bit";
         var jwtIssuer = _configuration["Jwt:Issuer"] ?? "MolanaApp";
         var jwtAudience = _configuration["Jwt:Audience"] ?? "MolanaAppUsers";
         
